@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: texttospeech
+    volumes:
+      - ./audio:/tmp/audio
+      - ./app:/app
+    ports:
+      - 8089:5000
+    
